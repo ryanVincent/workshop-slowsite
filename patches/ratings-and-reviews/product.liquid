@@ -1,0 +1,9 @@
+<!-- server-rating -->
+<a href="#reviews" class="product-rating" id="customer-rating" aria-label="{{ product.rating }} out of 5">
+  {% for i in (1..product.rating) %}&starf;{% endfor %}{% for i in (product.rating..4) %}&star;{% endfor %}
+</a>
+
+<reviews-details style="display:contents"><!-- this would probably be moved to our stylesheet in future -->
+  <!-- existing contents -->
+</reviews-details>
+<script src="/scripts/reviews-details.js" fetchpriority="low" defer></script>

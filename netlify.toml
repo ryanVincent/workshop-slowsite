@@ -1,0 +1,9 @@
+[dev]
+  publish = "dist"
+  command = "yarn start"
+  targetPort = 8080
+  port = 8888
+
+[build]
+  publish = "dist"
+  command = "yarn run build"

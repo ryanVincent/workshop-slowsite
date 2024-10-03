@@ -1,0 +1,30 @@
+<div class="product-gallery">
+  {% for image in product.images %}
+    <picture>
+      <source
+        srcset="{{ image.src }}?fm=avif&q=50&width=800 400w, {{ image.src }}?fm=avif&q=50&width=1000 500w, {{ image.src }}?fm=avif&q=50&width=1000 600w"
+        type="image/avif"
+      />
+      <source
+        srcset="{{ image.src }}?fm=webp&q=50&width=800 400w, {{ image.src }}?fm=webp&q=50&width=1000 500w, {{ image.src }}?fm=webp&q=50&width=1000 600w"
+        type="image/webp"
+      />
+      <img
+        srcset="{{ image.src }}?fm=jpg&q=50&width=800 400w, {{ image.src }}?fm=jpg&q=50&width=1000 500w, {{ image.src }}?fm=jpg&q=50&width=1000 600w"
+        sizes="(max-width: 800px) 100vw, 400px"
+        width="400" height="400"
+        style="background-image:url('{{ image.preview_src }}?width=400&q=30')"
+        {% if forloop.index0 == 0 %}
+          loading="eager"
+          fetchpriority="high"
+        {% elsif forloop.index0 == 1 %}
+          loading="auto"
+        {% else %}
+          loading="lazy"
+        {% endif %}
+        elementtiming="product-image-{{ forloop.index }}"
+        alt=""
+      />
+    </picture>
+  {% endfor %}
+</div>

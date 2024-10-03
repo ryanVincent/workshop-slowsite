@@ -1,0 +1,45 @@
+---
+layout: base
+permalink: products/{{ product.slug }}.html
+pagination:
+  data: products
+  size: 1
+  alias: product
+---
+
+<div class="product-detail-page">
+  <product-breadcrumbs class="breadcrumbs"></product-breadcrumbs>
+
+  <h1 class="product-title">{{ product.title }}</h1>
+
+  <rating-link><a href="#reviews" class="product-rating" id="customer-rating"></a></rating-link>
+  <script src="/scripts/rating-link.js" fetchpriority="high"></script>
+
+  <div class="product-gallery">
+    {% for image in product.images %}
+      <div>
+        <img src="{{ image.preview_src }}" loading="lazy" alt=""
+          elementtiming="product-image-{{ forloop.index }}"
+          id="product-image-{{ forloop.index }}"
+        />
+      </div>
+    {% endfor %}
+  </div>
+  <script>
+    {% for image in product.images %}
+      var image = document.getElementById("product-image-{{ forloop.index }}")
+      image.setAttribute("data-src", `{{ image.src }}?width=${2 * image.closest("div").getBoundingClientRect().width}&fm=jpg&q=90`);
+      image.classList.add("lazyload");
+    {% endfor %}
+  </script>
+
+  <details class="product-description" open>
+    <summary>Product Details</summary>
+    <div>{{ product.description_html }}</div>
+  </details>
+
+  <details class="product-reviews" id="reviews">
+    <summary>Customer Reviews</summary>
+    <div id="customer-reviews"></div>
+  </details>
+</div>

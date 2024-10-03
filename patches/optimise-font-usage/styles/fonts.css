@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/dm-serif-display/DMSerifDisplay-Regular.woff2") format("woff2"),
+       url("/fonts/dm-serif-display/DMSerifDisplay-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Adjusted Georgia Fallback';
+  src: local(Georgia);
+  size-adjust: 99%;
+  ascent-override: 100%;
+  descent-override: 26%;
+  line-gap-override: 13%;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+  font-weight: 1 999;
+  src: url("/fonts/inter-variable/Inter-Variable-Latin.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+  font-weight: 1 999;
+  src: url("/fonts/inter-variable/Inter-Variable-Latin-Extended.woff2") format("woff2-variations");
+  unicode-range: U+0100-017F;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("/fonts/inter/Inter-Regular.woff2") format("woff2"),
+       url("/fonts/inter/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url("/fonts/inter/Inter-Bold.woff2") format("woff2"),
+       url("/fonts/inter/Inter-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: normal;
+  font-display: swap;
+  src: url("/fonts/inter/Inter-Italic.woff2") format("woff2"),
+       url("/fonts/inter/Inter-Italic.woff") format("woff");
+}

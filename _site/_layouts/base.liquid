@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>performance.mark("head_start")</script>
+    <meta http-equiv="Content-Security-Policy" content="default-src: *" />
+    {% if product %}
+      <link rel="canonical" href="/catalog/{{ product.slug }}/" />
+    {% endif %}
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="description" content="A purposefully slow website for educational purposes">
+    <script src="https://example.com/this-will-fail.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="/scripts/site.js"></script>
+    <script src="https://twnsnd-slowsite-reviews.netlify.app/reviews.js" defer></script>
+    <script src="https://unpkg.com/lazysizes@5.3.2/lazysizes.js" async></script>
+    <script src="/scripts/cookies.js" type="module"></script>
+
+    <link rel="stylesheet" href="/styles/fonts.css" />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+
+    <link rel="preload" as="image" href="/images/product-image-1-preview.jpg?width=100" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes" />
+
+    <title>TWNSND Workshop Slow Site</title>
+
+    <script>performance.mark("head_end");performance.measure("head_duration", "head_start", "head_end")</script>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <h1 class="logo" elementtiming="logo"><a href="/">Relic Seeker</a></h1>
+
+    {{ content }}
+
+    <div class="cookies" id="cookie-wrapper">
+    </div>
+  </body>
+</html>

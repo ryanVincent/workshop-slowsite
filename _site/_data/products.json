@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Jade Artefact",
+    "slug": "jade-artefact",
+    "price": "GBP 1,500.00",
+    "rating": 4,
+    "description_html": "<p>Unearthed from the depths of a long-forgotten temple, this exquisite jade stone artifact carries the allure of ancient civilizations and the thrill of a daring discovery. Found by an adventurer reminiscent of <em>Indiana Jones</em>, it was hidden deep within a labyrinthine jungle, where time had swallowed the ruins of a once-great kingdom. The jade’s vibrant green hues, polished by centuries of passage, shimmer with a mysterious glow, as if still charged with the energy of the ancient hands that carved it. It is a symbol of power, beauty, and enduring mystery, holding untold stories within its smooth surface.</p><p>This particular artifact, shaped in a delicate balance of geometric precision and organic curves, is believed to have served both ritualistic and decorative purposes. Its intricate carvings tell tales of gods, rulers, and sacred ceremonies lost to time, yet preserved in the exquisite craftsmanship. The jade itself, prized for its rarity and spiritual significance in ancient cultures, was thought to be a bridge between the mortal world and the divine. In the hands of this fearless adventurer, it was discovered after unraveling a series of perilous traps—proof that its protection was of the highest importance to those who once revered it.</p><p>Not merely a collector's item, <strong>this jade artifact is a gateway into a world of myth and adventure</strong>. Its discovery echoes the bravery and curiosity of the adventurer who risked everything to bring it to light, while its craftsmanship evokes the mastery of artisans from a forgotten era. Whether displayed as a centerpiece or treasured as a relic of a distant past, this jade artifact promises to captivate the imagination of all who encounter it, imbuing its surroundings with a sense of mystique and untold history.</p>",
+    "images": [
+      {
+        "src": "https://twnsnd-slowsite-images.netlify.app/optim/images/product-image-1.jpg",
+        "preview_src": "/images/product-image-1-preview.jpg"
+      },
+      {
+        "src": "https://twnsnd-slowsite-images.netlify.app/optim/images/product-image-2.jpg",
+        "preview_src": "/images/product-image-2-preview.jpg"
+      },
+      {
+        "src": "https://twnsnd-slowsite-images.netlify.app/optim/images/product-image-3.jpg",
+        "preview_src": "/images/product-image-3-preview.jpg"
+      }
+    ]
+  }
+]

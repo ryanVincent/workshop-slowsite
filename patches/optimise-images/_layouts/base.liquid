@@ -1,0 +1,11 @@
+{% if product %}
+  <!-- our preview LCP: -->
+  <link rel="preload" as="image" fetchpriority="high" href="{{ product.images[0].preview_src }}?width=400&q=30" />
+  <!-- optional: -->
+  <link rel="preload" as="image" type="image/avif" imagesizes="(max-width: 800px) 100vw, 400px"
+    imagesrcset="{{ product.images[0].src }}?fm=avif&q=50&width=800 400w, {{ product.images[0].src }}?fm=avif&q=50&width=1000 500w, {{ product.images[0].src }}?fm=avif&q=50&width=1000 600w"
+  />
+  <link rel="preload" as="image" type="image/webp" imagesizes="(max-width: 800px) 100vw, 400px"
+    imagesrcset="{{ product.images[0].src }}?fm=webp&q=50&width=800 400w, {{ product.images[0].src }}?fm=webp&q=50&width=1000 500w, {{ product.images[0].src }}?fm=webp&q=50&width=1000 600w"
+  />
+{% endif %}

@@ -1,0 +1,1 @@
+Remove `<meta http-equiv="Content-Security-Policy" content="default-src: *" />` from base.liquid

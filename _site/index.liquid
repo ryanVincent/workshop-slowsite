@@ -1,0 +1,25 @@
+---
+layout: base
+permalink: index.html
+---
+
+<div class="homepage">
+  <h1>Products</h1>
+
+  <div class="product-grid">
+    {% for product in products %}
+      <div class="product-card">
+        <a href="/catalog/{{ product.slug }}/">
+          <img
+            src="{{ product.images[0].src }}"
+            width="200" height="200"
+            class="product-card__image"
+            elementtiming="product-image-{{ forloop.index }}"
+          />
+        </a>
+        <a href="/catalog/{{ product.slug }}/" class="product-card__title">{{ product.title }}</a>
+        <p class="product-card__price">{{ product.price }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>

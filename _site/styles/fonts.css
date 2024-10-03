@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display|Inter|Inter:italic|Inter:bold");
+
+@font-face {
+  font-family: 'Indiana Jonas';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Indiana-Jonas.woff2") format("woff2");
+}

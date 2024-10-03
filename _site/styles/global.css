@@ -1,0 +1,49 @@
+@import url("/styles/cookies.css");
+@import url("/styles/homepage.css");
+@import url("/styles/product-detail-page.css");
+
+:root {
+  --background-color: #20201D;
+  --text-color: #E0DCC4;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: bold;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, var(--text-color) 50%, var(--background-color));
+}
+
+.logo {
+  max-width: 800px;
+  margin-block: 1rem;
+  margin-inline: auto;
+
+  @media (width < 800px) {
+    padding-inline: 1rem;
+  }
+
+  font-family: 'Indiana Jonas', sans-serif;
+  font-size: 4rem;
+  font-weight: normal;
+
+  background: linear-gradient(to bottom,#E0631E, #F8DB48 70%, #FBF5D5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(-3px 3px #000);
+
+  a {
+    text-decoration: none;
+  }
+}

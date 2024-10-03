@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
       <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes" />
+
     <title>TWNSND Workshop Slow Site</title>
     <script>performance.mark("head_start")</script>
     {% if product %}
@@ -9,17 +11,16 @@
     {% endif %}
     <meta name="robots" content="noindex,nofollow" />
     <meta name="description" content="A purposefully slow website for educational purposes">
-    <script src="https://twnsnd-slowsite-reviews.netlify.app/reviews.js" defer></script>
     <script src="https://unpkg.com/lazysizes@5.3.2/lazysizes.js" async></script>
-    <script src="/scripts/cookies.js" type="module"></script>
+    <script src="/scripts/cookies.js" type="module" async></script>
 
     <style>{% include "styles/fonts.css" %}</style>
     <style>{% include "styles/reset.css" %}</style>
     <style>{% include "styles/global.css" %}</style>
 
     <link rel="preload" as="image" href="/images/product-image-1-preview.jpg?width=100" />
+    <script src="https://twnsnd-slowsite-reviews.netlify.app/reviews.js" defer></script>
 
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes" />
     <script>performance.mark("head_end");performance.measure("head_duration", "head_start", "head_end")</script>
   </head>
 

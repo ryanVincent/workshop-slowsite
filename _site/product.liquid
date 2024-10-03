@@ -8,14 +8,17 @@ pagination:
 ---
 
 <div class="product-detail-page">
-  <product-breadcrumbs class="breadcrumbs"></product-breadcrumbs>
+  <product-breadcrumbs class="breadcrumbs"><a href="/">Home</a></product-breadcrumbs>
   <script src="https://code.jquery.com/jquery-3.7.1.js" defer></script>
   <script src="/scripts/site.js" defer></script>
 
   <h1 class="product-title">{{ product.title }}</h1>
 
-  <rating-link><a href="#reviews" class="product-rating" id="customer-rating"></a></rating-link>
-  <script src="/scripts/rating-link.js" fetchpriority="high"></script>
+  <rating-link>
+    <a href="#reviews" class="product-rating" id="customer-rating" aria-label="{{ product.rating }} out of 5">
+      {% for i in (1..product.rating) %}&starf;{% endfor %}{% for i in (product.rating..4) %}&star;{% endfor %}
+    </a>
+  </rating-link>
 
   <div class="product-gallery">
   {% for image in product.images %}
@@ -47,6 +50,8 @@ pagination:
     </picture>
   {% endfor %}
 </div>
+<reviews-details style="display:contents"><!-- this would probably be moved to our stylesheet in future -->
+
   <details class="product-description" open>
     <summary>Product Details</summary>
     <div>{{ product.description_html }}</div>
@@ -56,4 +61,8 @@ pagination:
     <summary>Customer Reviews</summary>
     <div id="customer-reviews"></div>
   </details>
+  </reviews-details>
+<script src="/scripts/reviews-details.js" fetchpriority="low" defer></script>
 </div>
+
+<script src="/scripts/rating-link.js" defer fetchpriority="low"></script>

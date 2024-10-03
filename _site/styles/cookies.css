@@ -18,6 +18,9 @@
   gap: 1rem;
   align-content: center;
 
+  font-size: 1.75rem;
+  line-height: 1.5;
+
   button {
     border: 0;
     padding: 0.5rem;

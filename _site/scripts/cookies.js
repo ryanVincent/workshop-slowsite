@@ -7,7 +7,7 @@ reactRoot.render(
     React.createElement("dialog", { key: "cookie-dialog" }, [
       React.createElement("p", {
         key: "cookie-notice"
-      }, "This site uses cookies to slow your experience."),
+      }, "Relic Seeker's Cookie Policy: This site uses cookies to slow your experience. By using this site, you agree to our use of cookies for the purposes of marketing, analytics and your maintaining your preferences across visits."),
       React.createElement("form", { key: "cookie-form", "method": "dialog" }, [
         React.createElement("button", {
           key: "cookie-button",

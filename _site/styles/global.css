@@ -10,6 +10,13 @@ body {
 
   background-color: var(--background-color);
   color: var(--text-color);
+
+  @supports (font-variation-settings: "width" 115) {
+    font-family: 'Inter Variable', sans-serif;
+    i,em {
+      font-family: 'Inter', sans-serif;
+    }
+  }
 }
 
 h1, h2, h3 {

@@ -7,7 +7,7 @@
     <title>TWNSND Workshop Slow Site</title>
     <script>performance.mark("head_start")</script>
     {% if product %}
-      <link rel="canonical" href="/catalog/{{ product.slug }}/" />
+      <link rel="canonical" href="/products/{{ product.slug }}.html" />
     {% endif %}
     <meta name="robots" content="noindex,nofollow" />
     <meta name="description" content="A purposefully slow website for educational purposes">
@@ -17,6 +17,16 @@
     <style>{% include "styles/fonts.css" %}</style>
     <style>{% include "styles/reset.css" %}</style>
     <style>{% include "styles/global.css" %}</style>
+    <style>{% include "styles/cookies.css" %}</style>
+
+    {% if product %}
+      <style>{% include "styles/homepage.css" %}</style>
+    {% else %}
+      <style>{% include "styles/product-detail-page.css" %}</style>
+    {% endif %}
+
+    
+    
 
     <link rel="preload" as="image" href="/images/product-image-1-preview.jpg?width=100" />
     <script src="https://twnsnd-slowsite-reviews.netlify.app/reviews.js" defer></script>
@@ -25,7 +35,11 @@
   </head>
 
   <body>
-    <h1 class="logo" elementtiming="logo"><a href="/">Relic Seeker</a></h1>
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/dm-serif-display/DMSerifDisplay-Regular.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-variable/Inter-Variable-Latin.woff2" crossorigin />
+    <h1 class="logo">
+      <a href="/"><img src="/images/logo.svg" width="482" height="119" fetchpriority="high" alt="Relic Seeker" elementtiming="logo" /></a>
+    </h1>
 
     {{ content }}
 

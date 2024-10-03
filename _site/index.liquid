@@ -17,7 +17,7 @@ permalink: index.html
             elementtiming="product-image-{{ forloop.index }}"
           />
         </a>
-        <a href="/catalog/{{ product.slug }}/" class="product-card__title">{{ product.title }}</a>
+        <a href="/products/{{ product.slug }}.html" class="product-card__title">{{ product.title }}</a>
         <p class="product-card__price">{{ product.price }}</p>
       </div>
     {% endfor %}

@@ -1,6 +1,4 @@
-@import url("/styles/cookies.css");
-@import url("/styles/homepage.css");
-@import url("/styles/product-detail-page.css");
+
 
 :root {
   --background-color: #20201D;
@@ -34,14 +32,11 @@ a {
     padding-inline: 1rem;
   }
 
-  font-family: 'Indiana Jonas', sans-serif;
-  font-size: 4rem;
-  font-weight: normal;
-
-  background: linear-gradient(to bottom,#E0631E, #F8DB48 70%, #FBF5D5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(-3px 3px #000);
+  img {
+    width: auto;
+    height: 60px;
+  }
+  
 
   a {
     text-decoration: none;
